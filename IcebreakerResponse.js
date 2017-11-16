@@ -3,9 +3,11 @@ function IcebreakerResponse(email){
 }
 
 IcebreakerResponse.BatchCreate = function(emails){
-  let icebreakers = []
-  emails.forEach(function(email){
-    icebreakers.push( new IcebreakerResponse(email))
+  // let icebreakers = []
+  // emails.forEach(function(email){
+  //   icebreakers.push( new IcebreakerResponse(email))
+  // })
+  return emails.map(function(email){
+    new IcebreakerResponse(email)
   })
-  return icebreakers
 }
